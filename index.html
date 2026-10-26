@@ -4,66 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StayEase | Hotel Management</title>
+    <title>StayEase Hotel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>StayEase</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#rooms">Our Rooms</a>
-            <a href="#booking">Book Now</a>
-        </nav>
+        <h1>StayEase Hotel</h1>
+
+        
+<nav>
+    <a href="#home">Home</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+</nav>
+
     </header>
+    
 
     <main>
-        <section id="home" class="hero">
-            <h2>Find Your Perfect Stay</h2>
-            <p>Comfort, convenience, and exceptional hospitality.</p>
-            <a class="button" href="#rooms">Explore Rooms</a>
+        <section id="home">
+            <h2>Welcome to StayEase</h2>
+            <p>Your comfort is our priority.</p>
+            <button id="bookButton">Book a Room</button>
         </section>
 
-        <section id="rooms" class="rooms">
-            <h2>Our Rooms</h2>
+        
+<section id="rooms">
+    <h2>Our Rooms</h2>
+    <p>Choose the perfect room for your stay.</p>
 
-            <div class="room-list">
-                <article class="room-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
-                        alt="Comfortable hotel room">
-                    <h3>Standard Room</h3>
-                    <p>Comfortable accommodation for two guests.</p>
-                    <p class="price">$120 / night</p>
-                    <button onclick="bookRoom('Standard Room')">
-                        Book This Room
-                    </button>
-                </article>
+    <div class="room-list">
+        <article class="room-card">
+            <h3>Standard Room</h3>
+            <p>Comfortable accommodation for two guests.</p>
+            <p class="price">$120 / night</p>
+            <button class="room-book-button"
+                data-room="Standard Room">
+                Select Room
+            </button>
+        </article>
 
-                <article class="room-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
-                        alt="Spacious hotel room">
-                    <h3>Deluxe Room</h3>
-                    <p>Extra space and a premium experience.</p>
-                    <p class="price">$180 / night</p>
-                    <button onclick="bookRoom('Deluxe Room')">
-                        Book This Room
-                    </button>
-                </article>
-            </div>
-        </section>
+        <article class="room-card">
+            <h3>Deluxe Room</h3>
+            <p>Extra space for a more relaxing stay.</p>
+            <p class="price">$180 / night</p>
+            <button class="room-book-button"
+                data-room="Deluxe Room">
+                Select Room
+            </button>
+        </article>
+    </div>
+</section>
 
-        <section id="booking" class="booking">
-            <h2>Start Your Booking</h2>
-            <p id="booking-message">
-                Select a room to begin.
-            </p>
-        </section>
+
+        
+<section id="booking">
+    
+    <h2>Book Your Stay</h2>
+    <p>Enter your details to begin your reservation.</p>
+
+    <form id="bookingForm">
+        
+<label for="guestName">Full name</label>
+<input
+    type="text"
+    id="guestName"
+    name="guestName"
+    placeholder="Enter your full name"
+    required
+>
+
+<label for="guestEmail">Email address</label>
+<input
+    type="email"
+    id="guestEmail"
+    name="guestEmail"
+    placeholder="you@example.com"
+    required
+>
+
+        <label for="selectedRoom">Room</label>
+        <select id="selectedRoom" required>
+            <option value="">Choose a room</option>
+            <option value="Standard Room">Standard Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+        </select>
+
+        <label for="checkIn">Check-in</label>
+        <input type="date" id="checkIn" required>
+
+        <label for="checkOut">Check-out</label>
+        <input type="date" id="checkOut" required>
+
+        <label for="guests">Number of guests</label>
+        <input type="number" id="guests" min="1" max="4" value="1" required>
+        <p id="totalPrice">Estimated total: $0</p>
+
+        <button type="submit">Check Booking Details</button>
+    </form>
+
+    <p id="bookingMessage" aria-live="polite"></p>
+</section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 StayEase Hotel. All rights reserved.</p>
+        <p>&copy; 2026 StayEase Hotel</p>
     </footer>
 
     <script src="script.js"></script>
