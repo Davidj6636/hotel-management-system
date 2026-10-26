@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayEase | Hotel Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StayEase</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Our Rooms</a>
+            <a href="#booking">Book Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Find Your Perfect Stay</h2>
+            <p>Comfort, convenience, and exceptional hospitality.</p>
+            <a class="button" href="#rooms">Explore Rooms</a>
+        </section>
+
+        <section id="rooms" class="rooms">
+            <h2>Our Rooms</h2>
+
+            <div class="room-list">
+                <article class="room-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
+                        alt="Comfortable hotel room">
+                    <h3>Standard Room</h3>
+                    <p>Comfortable accommodation for two guests.</p>
+                    <p class="price">$120 / night</p>
+                    <button onclick="bookRoom('Standard Room')">
+                        Book This Room
+                    </button>
+                </article>
+
+                <article class="room-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
+                        alt="Spacious hotel room">
+                    <h3>Deluxe Room</h3>
+                    <p>Extra space and a premium experience.</p>
+                    <p class="price">$180 / night</p>
+                    <button onclick="bookRoom('Deluxe Room')">
+                        Book This Room
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section id="booking" class="booking">
+            <h2>Start Your Booking</h2>
+            <p id="booking-message">
+                Select a room to begin.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StayEase Hotel. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
